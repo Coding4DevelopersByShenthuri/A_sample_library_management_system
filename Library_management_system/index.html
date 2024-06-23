@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Library Management System</h2>
+
+    <div class="container">
+        <div class="section">
+            <h3>Add New Book</h3>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title">
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author">
+            </div>
+            <div class="form-group">
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn">
+            </div>
+            <button onclick="addBook()">Add Book</button>
+        </div>
+
+        <div class="section">
+            <h3>Issue/Return Book</h3>
+            <div class="form-group">
+                <label for="memberId">Member ID:</label>
+                <input type="number" id="memberId">
+            </div>
+            <div class="form-group">
+                <label for="bookIndex">Select Book:</label>
+                <select id="bookIndex">
+                    <!-- Options will be dynamically populated -->
+                </select>
+            </div>
+            <div class="form-group">
+                <button onclick="issueBook()">Issue Book</button>
+                <button onclick="returnBook()">Return Book</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-list">
+        <h3>Available Books</h3>
+        <ul id="availableBooks">
+            <!-- List of available books will be dynamically populated -->
+        </ul>
+    </div>
+
+    <script src="library.js"></script>
+</body>
+</html>
